@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../global.css">
+    <style>
+        .main-content h1 {
+            color: black;
+        }
+
+        h1 {
+            font-size: 23px;
+        }
+
+        .main-content {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .pre {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-left: 3px solid #f36d33;
+            color: #666;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 1.6em;
+            max-width: 100%;
+            overflow: auto;
+            padding: 1em 1.5em;
+            display: block;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-image"></div>
+    <header>
+
+        <img class="hamImg" id="himg" src="../assets/images/rect1111.png">
+  
+        <h1 class="source-code-font bigfont">Projects</h1>
+  
+        <nav class="linenav source-code-font">
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">My Projects</a>
+            <a href="/contacts">Contact</a>
+        </nav>
+  
+        <nav class="dropnav source-code-font" id="dropdown">
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">My Projects</a>
+            <a href="/contacts">Contact</a>
+        </nav>
+  
+  
+  
+        <div class="blurback" id="background">
+  
+        </div>
+  
+  
+        <div>            <img class="profImg" src="../assets/images/headshots/h1.png">
+        </div>
+  
+  
+  
+  
+  
+  
+    </header>
+    <div class="container">
+
+        <div class="main-content">
+
+
+
+
+
+
+            <h1>
+                My implementation attempt of a chess bot in C.
+            </h1>
+            <p>
+                In the pursuit of learning memory usage in C and other low-level languages I decided to take on the task
+                of building a chess bot algorithm from basically scratch on my own.
+                My motivation for this was not only my love for the game but also the idea of compressing it as much as
+                I could. This project is still ongoing, and I will be updating this at some points perhaps.
+            </p>
+            <p>
+                Before I actually can begin building the bot, it is necessary to actually make a board be somehow
+                represented in the program, so I decided it would be wise to compress it as much as possible. I decided
+                to represent the pieces as 4-bit numbers, in rows of 32-bit integers, the default Int size in C. This
+                would result to the following representation of the intial chess position:
+
+            </p>
+
+            <code class="pre">
+                board[7] = 0x3759B573;</br>
+                board[6] = 0x11111111;</br>
+                board[5] = 0x00000000;</br>
+                board[4] = 0x00000000;</br>
+                board[3] = 0x00000000;</br>
+                board[2] = 0x00000000;</br>
+                board[1] = 0x22222222;</br>
+                board[0] = 0x486AC684;</br>
+            </code>
+
+            <p>
+                Moving the position into a 16-bit system makes it easier to recognise which numbers represent which
+                pieces, making the retrieval of a piece obvious in the following function:
+
+
+            </p>
+            <code class="pre">
+                unsigned int pieceAt(int col, int row)</br>
+                { // pos = 1 to 8</br>
+                    return (unsigned int)(*board + (row - 1)) << (4 * (col - 1)) >> 28;</br>
+                }</br>
+            </code>
+            <p>
+                which, represented graphically, essentially does the following:
+            </p>
+            <img src="../assets/images/func1.png">
+            <p>
+                Yes, this is ms paint. Anyway, with the board reading part out of the way, its time to actually add the
+                piece logic, after which we will be able to generate a list of all legal moves. For each piece this has to be done separately, and optimising this process will be something I will put off for later. For now, I'm satisfied with the barebones functions.
+                
+            </p>
+
+
+        </div>
+    </div>
+    <footer>
+        &copy; Ilja Zaicevs
+    </footer>
+</body>
+<script src="../global.js"></script>
+
+</html>

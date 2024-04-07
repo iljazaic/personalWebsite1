@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../global.css">
+
+    <style>
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            justify-content: space-evenly;
+            gap: 0px;
+            row-gap: 0px;
+            padding-left: 0px;
+            padding-right: 50px;
+
+        }
+        .main-content{ 
+
+            background: linear-gradient(#c0bcf3, #7a7e96);
+            background-size: cover;
+        }
+        .block {
+            overflow: hidden;
+            background-color: #f0f0f0;
+            padding: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 8px;
+            height: auto;
+            width: 400px;
+            position: relative;
+            left: 0;
+            transition-duration: .5s;
+            box-shadow: 10px 5px 15px rgb(0, 0, 0);
+        }   
+        .block ul li{
+            font-size: 20px;
+        }
+        .block p{
+            font-size: 25px;
+
+        }
+        .block:nth-child(odd) {
+            background-color: #3b4ad4;
+            color:black;
+        }
+
+        .block:nth-child(2n) a {
+            background-color: #3c3c3c;
+            color: rgb(77, 77, 77);
+
+        }
+
+        .block:nth-child(-n+3) {
+            z-index: 1;
+        }
+
+        .block:hover {
+            left: -60px;
+        }
+
+        .block a {
+            padding-bottom: 0px;
+            font-size: 25px;
+            text-decoration: none;
+            color: #000000;
+        }
+
+
+
+        p{
+            font-size:25px;
+
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        li{
+            font-size:25px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        @media (max-width: 804px) {}
+
+        @media (max-width: 1500px) {
+
+            .container {
+                width: 90%;
+            }
+
+            .block {
+                padding-top: 2%;
+                padding-bottom: 70px;
+                height: auto;
+                width: 20vw;
+            }
+
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+                gap: 0px;
+            }
+
+        }
+
+        @media screen and (max-width: 600px) {
+            .block:nth-child(odd) {
+                z-index: 35;
+            }
+
+            .block:nth-child(even) {
+                z-index: 0;
+            }
+
+            .container {
+                width: 90%;
+                padding: 0;
+            }
+
+            .block {
+                height: auto;
+                width: 90%;
+            }
+
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(50vw, 0fr));
+                gap: 0px;
+                padding: auto;
+            }
+            .block:hover {
+                left: -0px;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-image"></div>
+    <header>
+
+        <img class="hamImg" id="himg" src="../assets/images/rect1111.png">
+
+        <h1 class="source-code-font bigfont">About</h1>
+
+        <nav class="linenav source-code-font">
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">My Projects</a>
+            <a href="/contacts">Contact</a>
+        </nav>
+
+        <nav class="dropnav source-code-font" id="dropdown">
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">My Projects</a>
+            <a href="/contacts">Contact</a>
+        </nav>
+
+
+
+        <div class="blurback" id="background">
+
+        </div>
+
+
+        <div>            <img class="profImg" src="../assets/images/headshots/h1.png">
+        </div>
+
+
+
+
+
+
+    </header>
+    <div class="container">
+
+        <div class="main-content">
+
+            <div class="grid">
+                <div class="block">
+                    <a>
+                        <h2>About me</h2>
+                        <p>Here is some information about me - who I am and what I do. </b></p>
+                    </a>
+
+                </div>
+                <div class="block">
+                    <a>
+                        <h2>My education</h2>
+                        <p>Here are some of the courses I
+                            have attended:<ul>
+                                <li>Web development in PHP (2023, Daugavpils Centrāla Vidusskola)</li>
+                                <li>C++ Systems development (2022, Rīgas Tehniska Universitāte)</li>
+                                <li>Java application development (2021, Rīgas Tehniska Universitāte)</li>
+                            </ul>
+                            </b>
+
+                        </p>
+                    </a>
+                </div>
+                <div class="block">
+                    <a>
+                        <h2>I am a student!</h2>
+                        <p>I am currently studying, thus I am trying to gain experience and means to support myself!</p>
+                    </a>
+                </div>
+                <div class="block">
+                    <a>
+                        <h2>What I can do for you?</h2>
+                        <p><ul>
+                                <li>
+                                    Building/Maintaining frontend/backend of websites in PHP, Node.JS, Java
+                                </li>
+                                <li>
+                                    Compiling/analyzing data, automating data processes with Python
+                                </li>
+                                <li>
+                                    Working with SQL/could databases
+                                </li>
+                                <li>
+                                    Maintaining applications in Java, Node.JS, C/C++
+                                </li>
+                            </ul>
+                        </p>
+                    </a>
+                </div>
+                <div class="block">
+                    <a>
+                        <h2>I'm a freelance developer!</h2>
+                        <p>If you need me to complete a job for a payment, I would happily accept any request! My
+                            contact information can be found <a href="">here</a>!
+                    </a></p>
+                    </a>
+                </div>
+                <div class="block">
+                    <a>
+                        <h2>Misc</h2>
+                        <p>I love mathematics, computer science and statistics! While frontend design isnt my favourite
+                            part of development, I still somehow managed to make this website look good.</p>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <footer>
+        &copy; Ilja Zaicevs
+    </footer>
+</body>
+<script src="../global.js"></script>
+
+</html>
