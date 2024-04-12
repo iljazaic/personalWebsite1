@@ -49,7 +49,6 @@ function openimg(){
         document.getElementById("headimg").style.position="relative";
 
     }else{
-        console.log("cluck detecktet");
         document.getElementById("headimg").style.maxWidth=(mw/2).toString()+"px";
 
         document.getElementById("headimg").style.zIndex="1000";
