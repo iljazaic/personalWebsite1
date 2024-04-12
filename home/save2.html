@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<style>
+    .h {
+        width: 250px;
+        height: 250px;
+        border-radius: 150px;
+
+    }
+
+    body {
+        background-color: white;
+    }
+
+
+
+
+    .detailContent{
+        width: 100%;
+        height: 250px;
+        background-color: gray;
+    }
+
+    .toppage{
+        width: 100%;
+        height: 700px;
+        display: grid;
+        grid-template-columns: repeat(10, 10%);
+        grid-template-rows: repeat(10, 70px);
+
+    }
+
+    .headshotimageswitch {
+        position: absolute;
+        right: 20%;
+        top: 100px;
+        padding-bottom: 20px;
+    }
+
+    .headshot {
+        right: 10%;
+        width: 100%;
+        text-align: center;
+        border-radius: 150px;
+        max-width: 300px;
+        text-align: center;
+        box-shadow: 0px 0px 50px rgb(255, 255, 255);
+    }
+
+    .main-content h1 {
+        color: rgb(0, 0, 0);
+
+    }
+
+    a {
+        color: rgb(47, 0, 255);
+        text-decoration: underline;
+    }
+
+
+
+    footer a {
+        color: rgb(187, 128, 0);
+        text-decoration: underline;
+    }
+
+    .blockshade {
+
+        width: 550px;
+        height: 150px;
+        position: relative;
+        background-color: yellow;
+        top: -250px;
+        left: 15%;
+        z-index: 0;
+        border-radius: 200px;
+    }
+
+
+    .t .blocktext {
+        top: 0px
+    }
+    .t{
+        position: relative;
+    }
+    .t2{
+        top:50%;
+        position: relative;
+        left:50%;
+    }
+    .headshotimageswitch .blockshade {
+        width: 250px;
+        left: 30%;
+        height: 250px;
+        z-index: -1;
+    }
+
+    .blocktext {
+        color: rgb(17, 55, 121);
+        padding: 30px;
+        position: relative;
+        left: 10%;
+        top: 10px;
+        z-index: 5;
+        width: 600px;
+        height: 250px;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 200px;
+    }
+
+    .bit {
+        width: 200px;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        font-size: 25px;
+        border-radius: 50px;
+        position: relative;
+        top: 40%;
+        left: 50%;
+        background-color: yellow;
+
+    }
+
+    .sec {
+        left: 40%;
+        top: 50%;
+    }
+
+    .intro {
+        font-size: 50px;
+        padding: 60px;
+        line-height: 80px;
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .block {
+            height: 250px;
+            width: 250px;
+            border-radius: 250px;
+            color: rgb(175, 16, 16);
+            padding: auto;
+            background-color: azure;
+            text-align: center;
+            box-shadow: 0px 10px 13px rgb(46, 46, 46);
+        }
+
+
+    }
+</style>
+
+<body>
+    <div class="bg-image"></div>
+    <header>
+
+        <img class="hamImg" id="himg" src="../assets/images/rect1111.png">
+
+        <h1>Home</h1>
+
+        <nav class="linenav">
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">My Projects</a>
+            <a href="/contacts">Contact</a>
+        </nav>
+
+        <nav class="dropnav" id="dropdown">
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">My Projects</a>
+            <a href="/contacts">Contact</a>
+        </nav>
+
+
+
+
+        <div class="blurback" id="background">
+
+        </div>
+
+
+
+
+        <div>
+            <img class="profImg" src="../assets/images/headshots/h1.png">
+
+        </div>
+
+    </header>
+
+
+
+    <div class="toppage">
+
+
+
+
+
+
+        <div class="headshotimageswitch">
+            <img class="headshot" id="headshot" src="../assets/images/headshots/h1.png">
+            </img>
+            <div class="blockshade">
+    
+            </div>
+        </div>
+    
+    
+    
+    
+        <div class="blocktext source-code-font intro">
+            Hello, I am Ilja Zaicevs
+        </div>
+        <div class="blockshade">
+    
+        </div>
+    
+        <div class="bit source-code-font">
+            Find out more <a>about me!</a>
+        </div>
+        <div class="bit sec source-code-font">
+            Fell free to <a>contact me!</a>
+        </div>
+    
+    
+    
+    
+    
+    
+        <div class="t">
+            <div class="blocktext source-code-font intro">
+                Programming, WebDev, DataScience
+            </div>
+            <div class="blockshade">
+    
+            </div>
+        </div>
+        <div class="t2">
+            <div class="blocktext source-code-font intro">
+                Flexible work, Employment, Freelance
+            </div>
+            <div class="blockshade">
+    
+            </div>
+        </div>
+    
+    </div>
+    <div class="detailContent">
+
+    </div>
+
+
+        <footer>
+            &copy; Ilja Zaicevs</a>
+        </footer>
+</body>
+<script>
+
+
+    var currentPhoto = 1;
+    var list = [1, 2, 3, 4, 5];
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    var t = 500;
+
+    function selectRandomPhoto() {
+        let n = getRandomInt(list.length)
+
+        while (list[n] == currentPhoto) {
+            list.pop(n);
+            n = getRandomInt(list.length);
+        }
+        currentPhoto = list[n];
+        list = [1, 2, 3, 4, 5];
+        let a = currentPhoto.toString();
+        console.log(currentPhoto);
+        document.getElementById("headshot").src = `../assets/images/headshots/h${a}.png`;
+    }
+
+
+
+    setInterval(selectRandomPhoto, t);
+</script>
+<script src="../global.js"></script>
+
+</html>
