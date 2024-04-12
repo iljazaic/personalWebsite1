@@ -5,44 +5,44 @@ const https = require("https")
 
 const app = express();
 const server = http.createServer(app);
-var files = fs.readdirSync(__dirname+"\\assets\\images");
-var hsh = fs.readdirSync(__dirname+"\\assets\\images\\headshots");
+var files = fs.readdirSync(__dirname+"/assets/images");
+var hsh = fs.readdirSync(__dirname+"/assets/images/headshots");
 
 app.get('/', (req, res)=>{
-    res.sendFile(__dirname+'\\home\\home.html');
+    res.sendFile(__dirname+'/home/home.html');
 })
 app.get('/home', (req, res)=>{
-    res.sendFile(__dirname+'\\home\\home.html');
+    res.sendFile(__dirname+'/home/home.html');
 })
 app.get('/about', (req, res)=>{
-    res.sendFile(__dirname+'\\about\\about.html');
+    res.sendFile(__dirname+'/about/about.html');
 })
 app.get('/projects', (req, res)=>{
-    res.sendFile(__dirname+'\\projects\\projects.html');
+    res.sendFile(__dirname+'/projects/projects.html');
 })
 app.get('/contact', (req, res)=>{
-    res.sendFile(__dirname+'\\contact\\contact.html');
+    res.sendFile(__dirname+'/contact/contact.html');
 })
 app.get('/projects/0', (req, res)=>{
-    res.sendFile(__dirname+'\\project_pages\\projectPage_0.html');
+    res.sendFile(__dirname+'/project_pages/projectPage_0.html');
 })
 app.get('/global.css', (req, res)=>{
-    res.sendFile(__dirname+'\\global.css');
+    res.sendFile(__dirname+'/global.css');
 })
 app.get('/global.js', (req, res)=>{
-    res.sendFile(__dirname+'\\global.js');
+    res.sendFile(__dirname+'/global.js');
 })
 
 
 files.forEach(image => {
     app.get('/assets/images/'+image, (req, res)=>{
-        res.sendFile(__dirname+'\\assets\\images\\'+image);
+        res.sendFile(__dirname+'/assets/images/'+image);
     })
 
 });
 hsh.forEach(image => {
     app.get('/assets/images/headshots/'+image, (req, res)=>{
-        res.sendFile(__dirname+'\\assets\\images\\headshots\\'+image);
+        res.sendFile(__dirname+'/assets/images/headshots/'+image);
     })
 
 });
